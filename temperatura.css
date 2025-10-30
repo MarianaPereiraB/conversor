@@ -1,0 +1,122 @@
+/* ======== ESTILO GERAL ======== */
+:root {
+    --gradiente-fundo: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    --gradiente-botao: linear-gradient(135deg, #6a11cb, #2575fc);
+    --gradiente-hover: linear-gradient(135deg, #2575fc, #6a11cb);
+    --texto-claro: #e0e0e0;
+    --azul-neon: #00bcd4;
+    --erro: #ff5252;
+    --borda: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--gradiente-fundo);
+    color: var(--texto-claro);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ======== CABEÇALHO ======== */
+header h2 {
+    text-align: center;
+    font-size: 2rem;
+    background: linear-gradient(90deg, #00bcd4, #6a11cb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* ======== CONTEÚDO ======== */
+main {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+}
+
+/* ======== CAMPOS ======== */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+    color: var(--azul-neon);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: var(--azul-neon);
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+}
+
+/* ======== BOTÃO ======== */
+input[type="button"] {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+    background: var(--gradiente-botao);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background: var(--gradiente-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 117, 252, 0.5);
+}
+
+/* ======== RESULTADO ======== */
+#resultado {
+    margin-top: 25px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--texto-claro);
+    text-shadow: 0 0 10px rgba(0,188,212,0.5);
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 600px) {
+    main {
+        padding: 25px;
+    }
+
+    header h2 {
+        font-size: 1.6rem;
+    }
+
+    input[type="number"],
+    input[type="button"] {
+        font-size: 1rem;
+    }
+}
